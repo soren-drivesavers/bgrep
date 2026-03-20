@@ -143,9 +143,9 @@ def argparser():
 
     group = parser.add_argument_group('Context control')
     group.add_argument('-B', '--before-context', metavar='NUM', help='print NUM bytes of leading context (default 8)',
-        type=int, default=8)
+        type=int, default=0)
     group.add_argument('-A', '--after-context', metavar='NUM', help='print NUM bytes of trailing context (default 8)',
-        type=int, default=8)
+        type=int, default=0)
     group.add_argument('-C', '--context', metavar='NUM', help='print NUM bytes of output context',
         action=ContextAction, type=int)
     group.add_argument('--color', '--colour', metavar='WHEN', help="use colour to distinguish the matching string. WHEN may be 'always', 'never' or 'auto' (default).",
